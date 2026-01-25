@@ -12,6 +12,14 @@
 - **filesystem** - File system operations (enabled)
 - **github** - GitHub integration (requires `GITHUB_PERSONAL_ACCESS_TOKEN` in `.env`)
 
+### Where this hub fits (vs other options)
+This project is the lightweight, local option: a simple Docker + supervisord runner for a small set of MCP servers.
+
+- **If you want a single MCP endpoint + API/UI**: look at `mcp-hub` (central coordinator with HTTP/SSE, config management, and monitoring).
+- **If you want a web UI and per-server HTTP proxy ports**: `mcpzoo` provides that in a single container.
+- **If you need enterprise runtime, registry, gateway, and policy controls**: `ToolHive` is a full platform with Docker/K8s support.
+- **If you just need server implementations**: `modelcontextprotocol/servers` is the reference server repo this hub can run via `npx`.
+
 ### Environment Configuration
 Create a `.env` file in the repo root with the keys below (placeholders shown):
 ```bash
