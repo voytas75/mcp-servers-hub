@@ -3,8 +3,7 @@
 
 ### Active MCP Servers
 - **filesystem** - File system operations (enabled)
-- **github** - GitHub integration (disabled - needs token)
-- **slack** - Slack integration (disabled - needs token)
+- **github** - GitHub integration (requires `GITHUB_PERSONAL_ACCESS_TOKEN` in `.env`)
 
 ### IDE Integration
 - **Roo Cline (VS Code)**: Configured via `~/.vscode-server/data/User/globalStorage/rooveterinaryinc.roo-cline/settings/cline_mcp_settings.json`
