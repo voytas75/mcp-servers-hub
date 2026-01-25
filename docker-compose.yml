@@ -1,0 +1,22 @@
+services:
+  mcp-hub:
+    build: .
+    container_name: mcp-servers-hub
+    restart: unless-stopped
+    volumes:
+      # Mount server code for easy updates
+      - ./mcp-servers:/app/mcp-servers
+      # Persist logs
+      - ./logs:/app/logs
+      # Mount config for runtime changes
+      - ./supervisord.conf:/etc/supervisord.conf:ro
+    environment:
+      - TZ=Europe/Warsaw
+      - NODE_ENV=production
+    env_file:
+      - .env
+    # Expose stdio via named pipes for IDE integration
+    stdin_open: true
+    tty: true
+    # Network mode for potential HTTP-based MCP servers
+    network_mode: bridge
