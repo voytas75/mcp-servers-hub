@@ -1,0 +1,3 @@
+#!/bin/bash
+set -e
+exec docker exec -i mcp-servers-hub npx -y tavily-mcp
