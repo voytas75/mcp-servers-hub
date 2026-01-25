@@ -27,7 +27,12 @@ This project is the lightweight, local option: a simple Docker + supervisord run
 - **If you just need server implementations**: `modelcontextprotocol/servers` is the reference server repo this hub can run via `npx`.
 
 ### Environment Configuration
-Create a `.env` file in the repo root with the keys below (placeholders shown):
+Copy `.env.example` to `.env` in the repo root and fill in the values:
+```bash
+cp .env.example .env
+```
+
+Keys expected (placeholders shown):
 ```bash
 GITHUB_PERSONAL_ACCESS_TOKEN=your_github_token_here
 TAVILY_API_KEY=your_tavily_api_key_here
