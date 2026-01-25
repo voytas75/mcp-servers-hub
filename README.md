@@ -35,8 +35,8 @@ TAVILY_API_KEY=your_tavily_api_key_here
 ```
 
 ### IDE Integration
-- **Roo Cline (VS Code)**: Configured via `~/.vscode-server/data/User/globalStorage/rooveterinaryinc.roo-cline/settings/cline_mcp_settings.json`
-- **Wrapper Scripts**: Located in `~/.local/bin/mcp-*`
+- **Roo Cline (VS Code)**: Configured via `~/.vscode-server/data/User/globalStorage/rooveterinaryinc.roo-cline/settings/cline_mcp_settings.json` and `~/.vscode-server/data/User/globalStorage/rooveterinaryinc.roo-cline/settings/mcp_settings.json`
+- **Wrapper Scripts**: Located in `~/.local/bin/mcp-*` (e.g., `mcp-context7` proxies to the local Context7 HTTP endpoint)
 - **Codex CLI**: Point your Codex MCP settings to the same wrapper scripts (`~/.local/bin/mcp-*`) to launch servers over stdio.
 
 ### Management Commands
