@@ -15,6 +15,7 @@
 - **mcp-microsoft-docs** - Microsoft Docs MCP (remote via `mcp-remote`)
 - **mcp-system-info** - Local system configuration (enabled)
 - **mcp-tavily-expert** - Tavily search/extract/map/crawl (requires `TAVILY_API_KEY` in `.env`)
+- **mcp-firecrawl** - Firecrawl search/scrape/extract (requires `FIRECRAWL_API_KEY` in `.env`)
 - **mcp-exa** - Exa search (remote via `mcp-remote`)
 
 ### Where this hub fits (vs other options)
@@ -30,6 +31,7 @@ Create a `.env` file in the repo root with the keys below (placeholders shown):
 ```bash
 GITHUB_PERSONAL_ACCESS_TOKEN=your_github_token_here
 TAVILY_API_KEY=your_tavily_api_key_here
+FIRECRAWL_API_KEY=your_firecrawl_api_key_here
 # If you re-enable Slack, also set:
 # SLACK_BOT_TOKEN=your_slack_bot_token_here
 # SLACK_TEAM_ID=your_slack_team_id_here
