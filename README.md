@@ -17,6 +17,7 @@ GITHUB_PERSONAL_ACCESS_TOKEN=your_github_token_here
 ### IDE Integration
 - **Roo Cline (VS Code)**: Configured via `~/.vscode-server/data/User/globalStorage/rooveterinaryinc.roo-cline/settings/cline_mcp_settings.json`
 - **Wrapper Scripts**: Located in `~/.local/bin/mcp-*`
+- **Codex CLI**: Point your Codex MCP settings to the same wrapper scripts (`~/.local/bin/mcp-*`) to launch servers over stdio.
 
 ### Management Commands
 ```bash
