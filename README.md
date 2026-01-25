@@ -49,6 +49,24 @@ ln -sf "$PWD"/mcp-servers/wrappers/mcp-* ~/.local/bin/
 - **Wrapper Scripts**: Stored in `mcp-servers/wrappers/mcp-*` and symlinked into `~/.local/bin/mcp-*` (e.g., `mcp-context7` proxies to the local Context7 HTTP endpoint)
 - **Codex CLI**: Point your Codex MCP settings to the same wrapper scripts (`~/.local/bin/mcp-*`) to launch servers over stdio.
 
+### Codex CLI
+Codex reads MCP config from `~/.codex/config.toml` (shared with the IDE extension). After the hub is running and wrapper scripts are installed, add servers using either the CLI or by editing the file directly.
+
+Add servers with the CLI:
+```bash
+codex mcp add mcp-filesystem -- ~/.local/bin/mcp-filesystem
+codex mcp add mcp-context7 -- ~/.local/bin/mcp-context7
+```
+
+Or edit `config.toml` (use absolute paths for the wrapper scripts):
+```toml
+[mcp_servers.mcp-filesystem]
+command = "/home/you/.local/bin/mcp-filesystem"
+
+[mcp_servers.mcp-context7]
+command = "/home/you/.local/bin/mcp-context7"
+```
+
 ### Management Commands
 ```bash
 # View MCP server status
