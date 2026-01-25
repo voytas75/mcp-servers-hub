@@ -5,6 +5,15 @@
 - **filesystem** - File system operations (enabled)
 - **github** - GitHub integration (requires `GITHUB_PERSONAL_ACCESS_TOKEN` in `.env`)
 
+### Environment Configuration
+Create a `.env` file in the repo root with the keys below (placeholders shown):
+```bash
+GITHUB_PERSONAL_ACCESS_TOKEN=your_github_token_here
+# If you re-enable Slack, also set:
+# SLACK_BOT_TOKEN=your_slack_bot_token_here
+# SLACK_TEAM_ID=your_slack_team_id_here
+```
+
 ### IDE Integration
 - **Roo Cline (VS Code)**: Configured via `~/.vscode-server/data/User/globalStorage/rooveterinaryinc.roo-cline/settings/cline_mcp_settings.json`
 - **Wrapper Scripts**: Located in `~/.local/bin/mcp-*`
