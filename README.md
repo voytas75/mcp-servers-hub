@@ -1,6 +1,13 @@
 
 ## Current Configuration
 
+### Why use this hub instead of separate MCPs?
+- **One place to run them all**: start, stop, and restart multiple servers with a single `docker compose` and `supervisorctl` flow.
+- **Consistent logs**: every server writes to `./logs` so debugging doesn’t require hunting in multiple places.
+- **Shared env config**: tokens live in one `.env`, avoiding duplicated setup across separate runs.
+- **Fewer moving parts**: Docker image includes Node + Python deps once; no per‑server installs on the host.
+- **Easy IDE wiring**: wrapper scripts point to the hub, so adding a server doesn’t mean reworking IDE configs.
+
 ### Active MCP Servers
 - **filesystem** - File system operations (enabled)
 - **github** - GitHub integration (requires `GITHUB_PERSONAL_ACCESS_TOKEN` in `.env`)
