@@ -15,6 +15,7 @@
 - **mcp-microsoft-docs** - Microsoft Docs MCP (remote via `mcp-remote`)
 - **mcp-system-info** - Local system configuration (enabled)
 - **mcp-tavily-expert** - Tavily search/extract/map/crawl (requires `TAVILY_API_KEY` in `.env`)
+- **mcp-exa** - Exa search (remote via `mcp-remote`)
 
 ### Where this hub fits (vs other options)
 This project is the lightweight, local option: a simple Docker + supervisord runner for a small set of MCP servers.
