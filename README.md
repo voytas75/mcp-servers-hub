@@ -12,6 +12,7 @@
 - **filesystem** - File system operations (enabled)
 - **github** - GitHub integration (requires `GITHUB_PERSONAL_ACCESS_TOKEN` in `.env`)
 - **context7** - Context7 documentation lookup (HTTP on `:8080`)
+- **microsoft-docs** - Microsoft Docs MCP (remote via `mcp-remote`)
 - **system-info** - Local system configuration (enabled)
 
 ### Where this hub fits (vs other options)
