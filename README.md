@@ -11,6 +11,7 @@
 ### Active MCP Servers
 - **filesystem** - File system operations (enabled)
 - **github** - GitHub integration (requires `GITHUB_PERSONAL_ACCESS_TOKEN` in `.env`)
+- **system-info** - Local system configuration (enabled)
 
 ### Where this hub fits (vs other options)
 This project is the lightweight, local option: a simple Docker + supervisord runner for a small set of MCP servers.
