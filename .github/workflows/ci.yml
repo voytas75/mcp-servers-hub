@@ -30,6 +30,9 @@ jobs:
           test -f package.json
           test -f requirements.txt
 
+      - name: Prepare CI env file
+        run: cp .env.example .env
+
       - name: Validate docker-compose parses
         run: docker compose config > /tmp/docker-compose.rendered.yml
 
