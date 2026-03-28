@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  config-smoke:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate core config files exist
+        run: |
+          test -f Dockerfile
+          test -f docker-compose.yml
+          test -f supervisord.conf
+          test -f healthcheck.sh
+          test -f .env.example
+          test -f package.json
+          test -f requirements.txt
+
+      - name: Validate docker-compose parses
+        run: docker compose config > /tmp/docker-compose.rendered.yml
+
+      - name: Validate package metadata
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('package.json').read_text())
+          assert data['name'] == 'mcp-servers-hub'
+          assert 'dependencies' in data
+          assert 'engines' in data
+          print('package.json:ok')
+          PY
+
+# Intentionally lightweight:
+# - validates the repo's config/orchestration surface
+# - avoids fake runtime checks against external MCP providers or local secrets
